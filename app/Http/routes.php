@@ -77,3 +77,4 @@ Route::get('/reporteperfil','altaperfil@reporteperfilf');
 
 
 
+
