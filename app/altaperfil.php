@@ -11,4 +11,3 @@ class altaperfil extends Model
     protected $fillable=['id_perfil','oficio_prefesion','certificados','premios','especializacion','habilidades','contacto','correo'];
     protected $date=['deleted_at'];
 }
-g
