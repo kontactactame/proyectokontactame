@@ -76,5 +76,8 @@ Route::get('/reporteperfil','altaperfil@reporteperfilf');
 
 
 
+Route::get('/altausuario','altausuario@altausuario');
+
+Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario');
 
 
