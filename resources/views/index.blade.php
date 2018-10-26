@@ -56,7 +56,7 @@
                                 <a href="#">Modificaciones<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="#">Consultas</a>
+                                        <a href="reporteperfil">Consultas</a>
                                     </li>
                                     <li>
                                         <a href="#">Bajas</a>
@@ -89,7 +89,7 @@
                                 <a href="#">Modificaciones<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="#">Consultas</a>
+                                        <a href="reportepostulantei">Consultas</a>
                                     </li>
                                     <li>
                                         <a href="#">Bajas</a>

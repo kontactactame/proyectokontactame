@@ -55,6 +55,14 @@ class altaperfil extends Controller
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
             }
+			 public function reporteperfilf()
+	{
+	$perfil=perfil::orderBy('id_perfil','asc')
+	          ->get();
+	//return $maestros;
+	  return view('sistema.reporte')
+	  ->with('perfil',$perfil);  
 		
            }
+}
            
