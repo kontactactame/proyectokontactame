@@ -77,6 +77,9 @@ Route::POST('/guardapostulantei','postulantec@guardapostulantef')->name('guardap
 Route::get('/reportepostulantei','postulantec@reportepostulantef')->name('reportepostulantei');
 ////////////////////////////////////////////alta usuario////////////////////////////////////////////////////////
 
+Route::get('/altausuario','altausuario@altausuario')->name('usuario');
+Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario');
+
 
 
 

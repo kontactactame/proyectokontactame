@@ -14,7 +14,7 @@ class altaperfil extends Controller
         $clavequesigue =perfil::orderBy('id_perfil','desc')->take(1)->get();
         $idms = $clavequesigue[0]->id_perfil+1;
    
-           return view ("altaperfil")->with(['idms'=>$idms]);
+           return view ("sistema.altaperfil")->with(['idms'=>$idms]);
        }
        
        public function guardaperfil(Request $request)
@@ -34,8 +34,8 @@ class altaperfil extends Controller
             'premios'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
             'especializacion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
             'habilidades'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-            'contacto'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-            'correo'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/']
+            'contacto'=>['regex:/^[0-9]{10}$/'],
+            'correo'=>'required|email|max:255',
             
             ]);
             
@@ -55,13 +55,6 @@ class altaperfil extends Controller
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
             }
-			 public function reporteperfilf()
-	{
-	$perfil=perfil::orderBy('id_perfil','asc')
-	          ->get();
-	//return $maestros;
-	  return view('sistema.reporte')
-	  ->with('perfil',$perfil);                  
-	}
+		
            }
            

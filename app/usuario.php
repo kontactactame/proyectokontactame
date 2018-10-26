@@ -8,5 +8,5 @@ class usuario extends Model
 {
     protected $primaryKey = 'id_usuario';  
     protected $fillable=['id_usuario','nombre','apellido_paterno','apellido_materno','archivo','usuario','contrasena','correo','archivo'];
-    protected $date=['deleted_at']; 
+    protected $date=['deleted_at'];
 }

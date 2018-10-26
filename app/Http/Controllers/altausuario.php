@@ -1,19 +1,21 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\usuario;
+
+
+
 class altausuario extends Controller
 {
-    public function altausuario()
+     public function altausuario()
     {
         $clavequesigue =usuario::orderBy('id_usuario','desc')->take(1)->get();
-        $idusuario = $clavequesigue[0]->id_usuario+1;
+        $idms = $clavequesigue[0]->id_usuario+1;
    
-           return view ('sistem.altausuario')->with(['idusuario'=>$idusuario]);
+           return view ("sistema.altausuario")->with(['idms'=>$idms]);
        }
        
        public function guardausuario(Request $request)
@@ -59,12 +61,12 @@ class altausuario extends Controller
             $usu->archivo = $img2;
             $usu->correo=$request->correo;
             $usu->save();
-            //dd($usu);
-            $proceso = "ALTA PERFIL";
-            $mensaje = "Sea registrado correctamente";
-            return view ('mensaje')
+            //dd($usu); 
+            $proceso = "ALTA DE USUARIO";
+            $mensaje = "REgistro guardado correctamente";
+            return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
             }
+		
            }
-        
