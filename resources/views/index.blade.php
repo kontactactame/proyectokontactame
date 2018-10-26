@@ -44,7 +44,7 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> PERFIL<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap"></i> Perfil<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="altaperfil">Altas</a>
@@ -66,12 +66,78 @@
                                     </li>
 
                                 </ul>
+								
+								
+								
+
+                            </li>
+							
+							
+                    
+                </ul>
+				
+				<li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Postulante<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="altapostulantei">Altas</a>
+                            </li>
+                            <li>
+                                <a href="#">Bajas</a>
+                            </li>
+                            <li>
+                                <a href="#">Modificaciones<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Consultas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bajas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+
+                                </ul>
+								
+								
+								
 
                             </li>
                         </ul>
                     </li>
-                    
-                </ul>
+					
+					
+					<li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Usuarios<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="altausuario">Altas</a>
+                            </li>
+                            <li>
+                                <a href="#">Bajas</a>
+                            </li>
+                            <li>
+                                <a href="#">Modificaciones<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Consultas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bajas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+
+                                </ul>
+								
+								
+								
+
+                            </li>
+                        </ul>
+                    </li>
 
             </div>
 
