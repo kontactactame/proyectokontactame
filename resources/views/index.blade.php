@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marvel Free Bootstrap Admin Template</title>
+    <title>KontactameMexiquense</title>
     <!-- Bootstrap Styles-->
     <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet" />
     <!-- FontAwesome Styles-->
@@ -44,7 +44,7 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> PERFILn<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap"></i> PERFIL<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="altaperfil">Altas</a>
@@ -53,13 +53,13 @@
                                 <a href="#">Bajas</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <a href="#">Modificaciones<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="#">Third Level Link</a>
+                                        <a href="#">Consultas</a>
                                     </li>
                                     <li>
-                                        <a href="#">Third Level Link</a>
+                                        <a href="#">Bajas</a>
                                     </li>
                                     <li>
                                         <a href="#">Third Level Link</a>
