@@ -75,6 +75,8 @@ Route::get('/reporteperfil','altaperfil@reporteperfilf');
 Route::get('/altapostulantei','postulantec@altapostulantef')->name('postulante');
 Route::POST('/guardapostulantei','postulantec@guardapostulantef')->name('guardapostulantei');
 Route::get('/reportepostulantei','postulantec@reportepostulantef')->name('reportepostulantei');
+////////////////////////////////////////////alta usuario////////////////////////////////////////////////////////
+
 
 
 
