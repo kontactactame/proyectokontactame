@@ -21,7 +21,7 @@ USE `tic71`;
 
 DROP TABLE IF EXISTS `categorias`;
 
-CREATE TABLE `categorias` (
+CREATE TABLE `categorias` (G
   `idc` int(11) DEFAULT NULL,
   `nombre` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
