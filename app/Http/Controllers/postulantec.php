@@ -50,12 +50,12 @@ class postulantec extends Controller
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
             }
-			 public function reporteperfilf()
+			 public function reportepostulantef()
 	{
-	$perfil=perfil::orderBy('id_perfil','asc')
+	$postulante=postulante::orderBy('id_postulante','asc')
 	          ->get();
 	//return $maestros;
-	  return view('sistema.reporte')
-	  ->with('perfil',$perfil);  
+	  return view('sistema.reportepostulante')
+	  ->with('postulante',$postulante);  
 }
 }
