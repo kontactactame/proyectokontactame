@@ -5,9 +5,9 @@
 <br>
 <table border= 4>
 <tr>
-<td>id postulante</td><td>oficio y profecion</td>
-<td>certificados</td><td>premios</td><td>especializacion</td>
-<td>habilidades</td><td>contacto</td><td>correo</td>
+<td>id postulante</td><td>nombre </td>
+<td>Apellido Paterno</td><td>Apellido Materno</td><td></td>
+<td>Usuario</td><td>Contraseña</td>
 </tr>
 @foreach($postulante as $ma)
 <tr>
@@ -31,7 +31,7 @@
    Modificar</a>
 @else
 	 <a href="{{URL::action('curso@restauram',['idm'=>$ma->idm])}}"> 
-	Restaurar  
+	Restaurar  Usuario
 	</a> 
     <a href="{{URL::action('curso@efisicam',['idm'=>$ma->idm])}}"> 
 	Eliminar 
