@@ -71,13 +71,10 @@ Route::get('/altaperfil','altaperfil@altaperfil')->name('perfil');
 Route::POST('/altaperf','altaperfil@altaperf')->name('altaperf');
 Route::POST('/guardaperfrfil','altaperfil@guardaperfil')->name('guardaperfil');
 Route::get('/reporteperfil','altaperfil@reporteperfilf');
+////////////////////////////////////////////alta postulante////////////////////////////////////////////////////////
+Route::get('/altapostulantei','postulantec@altapostulantef')->name('postulante');
+Route::POST('/guardapostulantei','postulantec@guardapostulantef')->name('guardapostulantei');
 
 
-
-
-
-Route::get('/altausuario','altausuario@altausuario');
-
-Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario');
 
 

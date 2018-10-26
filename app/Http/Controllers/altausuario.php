@@ -13,7 +13,7 @@ class altausuario extends Controller
         $clavequesigue =usuario::orderBy('id_usuario','desc')->take(1)->get();
         $idusuario = $clavequesigue[0]->id_usuario+1;
    
-           return view ("altausuario")->with(['idusuario'=>$idusuario]);
+           return view ('sistem.altausuario')->with(['idusuario'=>$idusuario]);
        }
        
        public function guardausuario(Request $request)
