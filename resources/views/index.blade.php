@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><strong>KONTACTAME</strong></a>
+                <a class="navbar-brand" href="index.html"><strong>Proyecto</strong></a>
 				
 		<div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
             </div>
@@ -52,26 +52,10 @@
                             <li>
                                 <a href="#">Bajas</a>
                             </li>
-                            <li>
-                                <a href="#">Modificaciones<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="reporteperfil">Consultas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bajas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-								
-								
-								
-
+							<li>
+                                <a href="reporteperfil">Consultas</a>
                             </li>
-							
+                            							
 							
                     
                 </ul>
@@ -86,21 +70,9 @@
                                 <a href="#">Bajas</a>
                             </li>
                             <li>
-                                <a href="#">Modificaciones<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="reportepostulantei">Consultas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bajas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-								
-								
+                                
+                               <a href="reportepostulantei">Consultas</a>
+                                   							
 								
 
                             </li>
