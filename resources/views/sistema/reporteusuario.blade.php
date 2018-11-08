@@ -5,9 +5,11 @@
 <br>
 <table border= 4>
 <tr>
+<table class="table table-hover">
+ 
 <td>Id_usuario</td><td>Nombre </td>
 <td>Apellido Paterno</td><td>Apellido Materno</td><td>Archivo</td>
-<td>Usuario</td><td>Contraseña</td><td> correo </td>
+<td>Usuario</td><td> correo </td>
 </tr>
 @foreach($usuario as $ma)
 <tr>
@@ -18,9 +20,8 @@
 <td><img src = "{{asset('archivos/'.$ma->archivo)}}"
         height =50 width=50>
     </td>
-<td>{{$ma->archivo}}</td>
+
 <td>{{$ma->nusuario}}</td>
-<td>{{$ma->contrasena}}</td>
 <td>{{$ma->correo}}</td>
 <td>
 

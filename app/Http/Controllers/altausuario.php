@@ -69,12 +69,12 @@ class altausuario extends Controller
             ->with('mensaje',$mensaje);
 			
 			 }
-            public function reporteusuario()
+            public function reporteusuariof()
 	 {
 	$usuario=usuario::orderBy('id_usuario','asc')
 	          ->get();
 	//return $maestros;
-	  return view('sistema.reporte')
+	  return view('sistema.reporteusuario')
 	  ->with('usuario',$usuario);  
 		
            }
