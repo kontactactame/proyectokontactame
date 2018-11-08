@@ -36,8 +36,21 @@ class altaperfil extends Controller
             'habilidades'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
             'contacto'=>['regex:/^[0-9]{10}$/'],
             'correo'=>'required|email|max:255',
-            
-            ]);
+			 'archivo'=>'image|mimes:jpeg,png,gif'
+	     ]);
+		 
+     $file = $request->file('archivo');
+	 if($file!="")
+	 {	 
+	 $ldate = date('Ymd_His_');
+	 $img = $file->getClientOriginalName();
+	 $img2 = $ldate.$img;
+	 \Storage::disk('local')->put($img2, \File::get($file));
+	 }
+	 else
+     {
+	 $img2= 'sinfoto.png';
+	 }
             
             $per = new perfil;
             $per->id_perfil = $request->id_perfil;
@@ -46,6 +59,7 @@ class altaperfil extends Controller
             $per->premios =$request->premios;
             $per->especializacion= $request->especializacion;
             $per->habilidades=$request->habilidades;
+			$per->archivo = $img2;
             $per->contacto=$request->contacto;
             $per->correo=$request->correo;
             $per->save();

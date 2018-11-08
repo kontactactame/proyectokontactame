@@ -11,6 +11,6 @@ class perfil extends Model
 
     
     protected $primaryKey = 'id_perfil';  
-    protected $fillable=['id_perfil','oficio_prefesion','certificados','premios','especializacion','habilidades','contacto','correo'];
+    protected $fillable=['id_perfil','oficio_prefesion','certificados','premios','especializacion','habilidades','contacto','correo','archivo'];
        protected $date=['deleted_at'];
 }
