@@ -4,7 +4,8 @@
 <h1>Reporte perfiles</h1>
 <br>
 <table border= 4>
-<table class="table table-hover">
+<table  class="table table-hover">
+
 <tr>
 <td>id perfil</td><td>oficio y profecion</td>
 <td>certificados</td><td>premios</td><td>especializacion</td>
@@ -28,10 +29,10 @@
 <td>{{$ma->cp}}</td>
 <td>
 @if($ma->deleted_at=="")
-   <a href="{{URL::action('curso@eliminam',['idm'=>$ma->idm])}}"> 
+   <a  class="btn btn-default" href="{{URL::action('curso@eliminam',['idm'=>$ma->idm])}}"> 
 	Inhabilitar 
 	</a> 
-   <a href="{{URL::action('curso@modificam',['idm'=>$ma->idm])}}"> 
+   <a class="btn btn-default" href="{{URL::action('curso@modificam',['idm'=>$ma->idm])}}"> 
    Modificar</a>
 @else
 	 <a href="{{URL::action('curso@restauram',['idm'=>$ma->idm])}}"> 
