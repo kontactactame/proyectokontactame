@@ -23,20 +23,7 @@
 <td>{{$ma->oficio_profecion}}</td>
 <td>{{$ma->cp}}</td>
 <td>
-@if($ma->deleted_at=="")
-   <a href="{{URL::action('curso@eliminam',['idm'=>$ma->idm])}}"> 
-	Inhabilitar 
-	</a> 
-   <a href="{{URL::action('curso@modificam',['idm'=>$ma->idm])}}"> 
-   Modificar</a>
-@else
-	 <a href="{{URL::action('curso@restauram',['idm'=>$ma->idm])}}"> 
-	Restaurar  Usuario
-	</a> 
-    <a href="{{URL::action('curso@efisicam',['idm'=>$ma->idm])}}"> 
-	Eliminar 
-	</a> 
-@endif
+
 </td>
 </tr>
 @endforeach
