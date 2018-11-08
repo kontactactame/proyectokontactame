@@ -118,7 +118,7 @@
                                 <a href="#">Bajas</a>
                             </li>
 							<li>
-                                <a href="#">Consultas</a>
+                                <a href="reporteusuarioi">Consultas</a>
                             </li>
                             
                         </ul>
