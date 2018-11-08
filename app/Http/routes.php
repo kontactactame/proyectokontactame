@@ -80,7 +80,7 @@ Route::get('/reportepostulantei','postulantec@reportepostulantef')->name('report
 
 Route::get('/altausuarioi','altausuario@altausuario')->name('altausuarioi');
 Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario');
-Route::get('/reporteusuarioi','usuario@reporteusuario')->name('reporteusuarioi');
+Route::get('/reporteusuarioi','altausuario@reporteusuariof')->name('reporteusuarioi');
 
 
 

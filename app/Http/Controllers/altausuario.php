@@ -67,6 +67,16 @@ class altausuario extends Controller
             return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
-            }
+			
+			 }
+            public function reporteusuariof()
+	 {
+	$usuario=usuario::orderBy('id_usuario','asc')
+	          ->get();
+	//return $maestros;
+	  return view('sistema.reporte')
+	  ->with('usuario',$usuario);  
 		
            }
+}
+           
