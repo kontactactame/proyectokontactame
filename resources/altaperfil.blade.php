@@ -8,7 +8,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                          <h1 align="center">  Alta perfil </h1>
+                          <h1 align="center">  Alta PERFIL </h1>
                           <br>
                         </div>
                         <div class="panel-body">

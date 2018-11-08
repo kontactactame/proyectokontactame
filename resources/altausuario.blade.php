@@ -8,7 +8,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                         <center> <h1>  Alta usuario</h1></center>
+                         <center> <h1>  Alta Usuario:</h1></center>
                           <br>
                         </div>
                         <div class="panel-body">
@@ -18,7 +18,7 @@
                                     {{csrf_field()}}
                                        
                                         <div class="form-group">
-                                            <label>Clave usuario :</label>
+                                            <label>Clave Usuario :</label>
                                             <input class="form-control"  name = 'id_usuario' value="{{$idms}}">
                                             
                                         </div>  
