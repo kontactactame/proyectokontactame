@@ -103,8 +103,8 @@
       
 		<div id="page-wrapper">
 		  <div class="header"> 
-                        <h1 class="page-header">
-                             <small>Bienvenido</small>
+                       <h1 class="page-header">
+                           Kontactame<small>Mexiquense</small>
                         </h1>
 						
 									
