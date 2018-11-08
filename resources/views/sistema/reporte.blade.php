@@ -4,6 +4,7 @@
 <h1>Reporte perfiles</h1>
 <br>
 <table border= 4>
+<table class="table table-hover">
 <tr>
 <td>id perfil</td><td>oficio y profecion</td>
 <td>certificados</td><td>premios</td><td>especializacion</td>
