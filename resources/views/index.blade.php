@@ -112,30 +112,15 @@
                         <a href="#"><i class="fa fa-sitemap"></i> Usuarios<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="altausuario">Altas</a>
+                                <a href="altausuarioi">Altas</a>
                             </li>
                             <li>
                                 <a href="#">Bajas</a>
                             </li>
-                            <li>
-                                <a href="#">Modificaciones<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Consultas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bajas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-								
-								
-								
-
+							<li>
+                                <a href="#">Consultas</a>
                             </li>
+                            
                         </ul>
                     </li>
 
@@ -147,7 +132,7 @@
 		<div id="page-wrapper">
 		  <div class="header"> 
                         <h1 class="page-header">
-                            Dashboard <small>Welcome John Doe</small>
+                             <small>Bienvenido</small>
                         </h1>
 						
 									

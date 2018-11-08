@@ -62,8 +62,8 @@ class altausuario extends Controller
             $usu->correo=$request->correo;
             $usu->save();
             //dd($usu); 
-            $proceso = "ALTA DE USUARIO";
-            $mensaje = "REgistro guardado correctamente";
+            $proceso = "ALTA DE USUARIO EXITOSA";
+            $mensaje = "Registro guardado correctamente";
             return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
