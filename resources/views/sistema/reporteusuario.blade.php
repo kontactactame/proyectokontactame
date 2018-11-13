@@ -9,7 +9,7 @@
  
 <td>Id_usuario</td><td>Nombre </td>
 <td>Apellido Paterno</td><td>Apellido Materno</td><td>Archivo</td>
-<td>Usuario</td><td> correo </td>
+<td>Usuario</td><td> Correo </td>
 </tr>
 @foreach($usuario as $ma)
 <tr>

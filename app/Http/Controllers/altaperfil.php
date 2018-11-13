@@ -49,7 +49,7 @@ class altaperfil extends Controller
 	 }
 	 else
      {
-	 $img2= 'sinfoto.png';
+	 $img2= 'sinfoto1.png';
 	 }
             
             $per = new perfil;
@@ -63,8 +63,8 @@ class altaperfil extends Controller
             $per->contacto=$request->contacto;
             $per->correo=$request->correo;
             $per->save();
-            $proceso = "ALTA DE MAESTRO";
-            $mensaje = "REgistro guardado correctamente";
+            $proceso = "ALTA DE PERFIL";
+            $mensaje = "Rgistro guardado correctamente";
             return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);

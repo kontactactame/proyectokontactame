@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', 'mysql.kontactamemexiquense.com'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'kontactamebase'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'username' => env('DB_USERNAME', 'jesus723488'),
+            'password' => env('DB_PASSWORD', 'jesus61854858'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

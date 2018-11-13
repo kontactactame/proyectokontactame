@@ -34,7 +34,7 @@ class altausuario extends Controller
             'apellido_paterno'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
             'apellido_materno'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
             'nusuario'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-            'contrasena'=> ['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+            'contrasena'=>'required|alpha_num',
             'correo'=>'required|email|max:255',
             'archivo'=>'image|mimes:jpeg,png,gif,jpg'
             ]);
@@ -48,7 +48,7 @@ class altausuario extends Controller
             }
             else
             {
-            $img2= 'sinfoto.png';
+            $img2= 'sinfoto1.png';
             }
             
             $usu = new usuario;
