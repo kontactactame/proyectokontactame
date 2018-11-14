@@ -1,4 +1,4 @@
-@extends('sistema.principal')
+@extends('index')
 
 
 @section('contenido')

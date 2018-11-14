@@ -113,13 +113,15 @@ class altausuario extends Controller
             'correo'=>'required|email|max:255',
             'archivo'=>'image|mimes:jpeg,png,gif,jpg'
             ]);
-            $file = $request->file('archivo');
-            if($file!="")
-            {	 
-            $ldate = date('Ymd_His_');
-            $img = $file->getClientOriginalName();
-            $img2 = $ldate.$img;
-            \Storage::disk('local')->put($img2, \File::get($file));
+            	 
+     $file = $request->file('archivo');
+	 if($file!="")
+	 {	 
+	 $ldate = date('Ymd_His_');
+	 $img = $file->getClientOriginalName();
+	 $img2 = $ldate.$img;
+	 \Storage::disk('local')->put($img2, \File::get($file));
+	 
             }
               $usu = usuario::find($id_usuario);
              $usu->id_usuario = $request->id_usuario;
@@ -128,7 +130,10 @@ class altausuario extends Controller
             $usu->apellido_materno =$request->apellido_materno;
             $usu->nusuario= $request->nusuario;
             $usu->contrasena=$request->contrasena;
-            
+            if($file!="")
+	        {	
+			$usu->archivo = $img2;
+	        }
             $usu->correo=$request->correo;
             $usu->save();
             //dd($usu); 
