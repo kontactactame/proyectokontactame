@@ -81,7 +81,8 @@ Route::get('/reportepostulantei','postulantec@reportepostulantef')->name('report
 Route::get('/altausuarioi','altausuario@altausuario')->name('altausuarioi');
 Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario');
 Route::get('/reporteusuarioi','altausuario@reporteusuariof')->name('reporteusuarioi');
-
+Route::get('/modificausuarioi/{id_usuario}','altausuario@modificausuariof')->name('modificausuarioi');
+Route::POST('/guardausuariomi','altausuario@guardausuariom')->name('guardausuariomi');
 
 
 
