@@ -74,9 +74,8 @@ Route::POST('/guardamodificam1','postulantec@guardamodificam1')->name('guardamod
 Route::get('/altausuarioi','altausuario@altausuario')->name('altausuarioi');
 Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario');
 Route::get('/reporteusuarioi','altausuario@reporteusuariof')->name('reporteusuarioi');
-Route::get('/modificausuarioi/{id_usuario}','altausuario@modificausuariof')->name('modificausuarioi');
-Route::POST('/guardausuariomi','altausuario@guardausuariom')->name('guardausuariomi');
-
+Route::get('/modificamu/{id_usuario}','altausuario@modificamu')->name('modificamu');
+Route::POST('/guardamodificamu','altausuario@guardamodificamu')->name('guardamodificamu');
 
 
 

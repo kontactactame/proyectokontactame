@@ -2,7 +2,7 @@
 
 
 @section('contenido')
-<form action =  "{{route('guardausuariomi')}}"  method = "POST" enctype='multipart/form-data' >                        
+<form action =  "{{route('guardamodificamu')}}"  method = "POST" enctype='multipart/form-data' >                        
 {{csrf_field()}}
 
 @if($errors->first('id_usuario')) 

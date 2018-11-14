@@ -78,7 +78,7 @@ class altausuario extends Controller
 	  ->with('usuario',$usuario);  
 		
            }
-		   public function modificausuariof($id_usuario)
+		   public function modificamu($id_usuario)
 	{
 		$usuario = usuario::where('id_usuario','=',$id_usuario)
 		                     ->get();
@@ -92,7 +92,7 @@ class altausuario extends Controller
 	
 	
 	}
-	 public function guardausuariom(Request $request)
+	 public function guardamodificamu(Request $request)
        {
            //dd($request);
 		     $id_usuario = $request->id_usuario;
