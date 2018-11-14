@@ -44,8 +44,8 @@ class postulantec extends Controller
             $per->contraseña=$request->contraseña;
  
             $per->save();
-            $proceso = "ALTA POSTULANTE";
-            $mensaje = "Registro guardado correctamente";
+            $proceso = "ALTA DE MAESTRO";
+            $mensaje = "REgistro guardado correctamente";
             return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);

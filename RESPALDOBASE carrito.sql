@@ -1,9 +1,9 @@
-yyisuuuuuuuus
+yisuuuuuuuus
 g/*
 SQLyog Ultimate v12.09 (64 bit)
 MySQL - 10.1.21-MariaDB : Database - tic71
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 

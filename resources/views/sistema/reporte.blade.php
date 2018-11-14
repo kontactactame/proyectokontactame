@@ -7,9 +7,9 @@
 <table  class="table table-hover">
 
 <tr>
-<td>Id perfil</td><td>Oficio / Profecion</td>
-<td>Certificados</td><td>Premios</td><td>Especializacion</td>
-<td>Habilidades</td><td>contacto</td><td>Correo</td><td>Archivo</td>
+<td>id perfil</td><td>oficio y profecion</td>
+<td>certificados</td><td>premios</td><td>especializacion</td>
+<td>habilidades</td><td>contacto</td><td>correo</td>
 </tr>
 @foreach($perfil as $ma)
 <tr>
