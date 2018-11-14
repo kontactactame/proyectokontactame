@@ -20,7 +20,9 @@
 <td>{{$ma->app}}</td>
 <td>{{$ma->apm}}</td>
 <td>{{$ma->usuario}}</td><td>
-
+<img src = "{{asset('archivos/'.$ma->archivo)}}"
+        height =50 width=50>
+    </td>
 <td>{{$ma->oficio_profecion}}</td>
 <td>{{$ma->cp}}</td>
 <td>

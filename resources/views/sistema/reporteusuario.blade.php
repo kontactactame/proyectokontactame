@@ -9,7 +9,7 @@
  
 <td>Id_usuario</td><td>Nombre </td>
 <td>Apellido Paterno</td><td>Apellido Materno</td><td>Archivo</td>
-<td>Usuario</td><td> Correo </td>
+<td>Usuario</td><td> correo </td>
 </tr>
 @foreach($usuario as $ma)
 <tr>
@@ -24,22 +24,6 @@
 <td>{{$ma->nusuario}}</td>
 <td>{{$ma->correo}}</td>
 <td>
-<td>
-@if($ma->deleted_at=="")
-   <a  class="btn btn-default" href="{{URL::action('curso@eliminam',['idm'=>$ma->idm])}}"> 
-	Inhabilitar 
-	</a> 
-   <a class="btn btn-default" href="{{URL::action('curso@modificam',['idm'=>$ma->idm])}}"> 
-   Modificar</a>
-@else
-	 <a href="{{URL::action('curso@restauram',['idm'=>$ma->idm])}}"> 
-	Restaurar  
-	</a> 
-    <a href="{{URL::action('curso@efisicam',['idm'=>$ma->idm])}}"> 
-	Eliminar 
-	</a> 
-@endif
-</td>
 
 </tr>
 @endforeach
