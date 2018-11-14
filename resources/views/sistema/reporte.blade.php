@@ -29,24 +29,26 @@
 <td>{{$ma->cp}}</td>
 <td>
 @if($ma->deleted_at=="")
-   <a  class="btn btn-default" href="{{URL::action('curso@eliminam',['idm'=>$ma->idm])}}"> 
+   <a  class="btn btn-default" href=""> 
 	Inhabilitar 
 	</a> 
-   <a class="btn btn-default" href="{{URL::action('curso@modificam',['idm'=>$ma->idm])}}"> 
+   <a class="btn btn-default" href="{{URL::action('altaperfil@modificam',['id_perfil'=>$ma->id_perfil])}}"> 
    Modificar</a>
 @else
-	 <a href="{{URL::action('curso@restauram',['idm'=>$ma->idm])}}"> 
+<a  class="btn btn-default" href=""> 
 	Restaurar  
 	</a> 
-    <a href="{{URL::action('curso@efisicam',['idm'=>$ma->idm])}}"> 
+    <a  class="btn btn-default" href="">  
 	Eliminar 
 	</a> 
+	
 @endif
 </td>
 </tr>
 @endforeach
 
 </table>
+
 @stop
 
 

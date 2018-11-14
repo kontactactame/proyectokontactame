@@ -119,74 +119,70 @@ class curso extends Controller
 	  return view('sistema.reporte')
 	  ->with('maestros',$maestros);                  
 	}
-	public function modificam($idm)
+	 public function modificam($id_perfil)
 	{
-		$maestro = maestros::where('idm','=',$idm)
+		$perfil = perfil::where('id_perfil','=',$id_perfil)
 		                     ->get();
-		$idc = $maestro[0]->idc;
-		$carrera = carreras::where('idc','=',$idc)->get();
-		
-		$otrascarreras = carreras::where('idc','!=',$idc)
-		                 ->get();
-		//return $carrera;
-		//return $maestro;
-		return view ('sistema.modificamaestro')
-		->with('maestro',$maestro[0])
-	    ->with('idc',$idc)
-	    ->with('carrera',$carrera[0]->nombre)
-		->with('otrascarreras',$otrascarreras);
-	
-	}
-    public function guardamodificam(Request $request)
-	{
-		$nombre =  $request->nombre;
-        $edad = $request->edad;
-        $sexo = $request->sexo;
-        $idm = $request->idm;
-        $correo = $request->correo;
-		$cp = $request->cp;
-		$beca = $request->beca;
         
-		 $this->validate($request,[
-         'nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-         'edad'=>'required|integer|min:18',
-		 'cp'=>['regex:/^[0-9]{5}$/'],
-		 'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
-		 'archivo'=>'image|mimes:jpeg,png,gif'
+         $id_perfil = $perfil[0]->id_perfil;
+		//return $carrera;
+		//return $perfil;
+		return view ('sistema.modificaperfil')
+		->with('perfil',$perfil[0]);
+	    
+	}
+
+public function guardamodificam(Request $request)
+       {
+           $oficio_profesion =  $request->oficio_profesion;
+           $certificados = $request->certificados;
+           $premios = $request->premios;
+           $especializacion = $request->especializacion;
+           $habilidades = $request->habilidades;
+           $contacto = $request->contacto;
+           $correo = $request->correo;
+           
+            $this->validate($request,[
+            'id_perfil'=>'required|numeric',
+            'oficio_profesion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+            'certificados'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+            'premios'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+            'especializacion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+            'habilidades'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+            'contacto'=>['regex:/^[0-9]{10}$/'],
+            'correo'=>'required|email|max:255',
+			 'archivo'=>'image|mimes:jpeg,png,gif'
 	     ]);
-		  $file = $request->file('archivo');
+		 
+     $file = $request->file('archivo');
 	 if($file!="")
 	 {	 
 	 $ldate = date('Ymd_His_');
 	 $img = $file->getClientOriginalName();
 	 $img2 = $ldate.$img;
-	 \Storage::disk('local')->put($img2, \File::get($file)); 
+	 \Storage::disk('local')->put($img2, \File::get($file));
 	 }
-	        $maest = maestros::find($idm);
-	        $maest->idm = $request->idm;
-			$maest->nombre = $request->nombre;
-			$maest->edad =$request->edad;
-			$maest->sexo= $request->sexo;
-			$maest->cp=$request->cp;
-			 if($file!="")
+	  
+            $per = perfil::find ($id_perfil);
+            $per->id_perfil = $request->id_perfil;
+            $per->oficio_profesion = $request->oficio_profesion;
+            $per->certificados = $request->certificados;
+            $per->premios =$request->premios;
+            $per->especializacion= $request->especializacion;
+            $per->habilidades=$request->habilidades;
+            if($file!="")
 	        {	
-			$maest->archivo = $img2;
+			$per->archivo = $img2;
 	        }
-			$maest->beca=$request->beca;
-			$maest->idc=$request->idc;
-			$maest->save();
-			$proceso = "MODIFICA MAESTRO";
-			$mensaje = "REgistro ha sido modificado correctamente";
-		    return view ('sistema.mensaje')
-			->with('proceso',$proceso)
-			->with('mensaje',$mensaje);
-	 
-	 
-	 
-	 
-	 
-		 echo "Listo para modificar";
-	}
+            $per->contacto=$request->contacto;
+            $per->correo=$request->correo;
+            $per->save();
+            $proceso = "MODIFICA DE PERFIL";
+            $mensaje = "Rgistro guardado correctamente";
+            return view ('sistema.mensaje')
+            ->with('proceso',$proceso)
+            ->with('mensaje',$mensaje);
+            }
 	public function eliminam($idm)
 	{
 		  maestros::find($idm)->delete();

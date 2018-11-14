@@ -43,20 +43,7 @@ Route::get('/at','curso@areatriangulo');
 Route::get('/ac/{lado}','curso@areacuadrado');
 Route::get('/ventas/costos/{cant}/{costo}','curso@total');
 
-Route::get('/altamaestro','curso@altamaestro');
-Route::POST('/guardamaestro','curso@guardamaestro')->name('guardamaestro');
-Route::get('/reportemaestros','curso@reportemaestros');
-Route::get('/modificam/{idm}','curso@modificam')->name('modificam');
-Route::POST('/guardamodificam','curso@guardamodificam')->name('guardamodificam');
-Route::get('/eliminam/{idm}','curso@eliminam')->name('eliminam');
-Route::get('/restauram/{idm}','curso@restauram')->name('restauram');
-Route::get('/efisicam/{idm}','curso@efisicam')->name('efisicam');
 
-Route::get('/altaperfill','perfil1@altaperfill');
-Route::POST('/guardaperfil','perfil1@guardaperfil')->name('guardaperfil');
-
-Route::get('/login','usuariosc@login');
-Route::POST('/iniciasesion','usuariosc@iniciasesion')->name('iniciasesion');
 
 
 /////////////////////////////Inicia Machote/////////////////////////////////////////////////////////////////////
@@ -71,10 +58,16 @@ Route::get('/altaperfil','altaperfil@altaperfil')->name('perfil');
 Route::POST('/altaperf','altaperfil@altaperf')->name('altaperf');
 Route::POST('/guardaperfrfil','altaperfil@guardaperfil')->name('guardaperfil');
 Route::get('/reporteperfil','altaperfil@reporteperfilf')->name('reporteperfil');
+
+Route::get('/modificam/{id_perfil}','altaperfil@modificam')->name('modificam');
+Route::POST('/guardamodificam','altaperfil@guardamodificam')->name('guardamodificam');
 ////////////////////////////////////////////alta postulante////////////////////////////////////////////////////////
 Route::get('/altapostulantei','postulantec@altapostulantef')->name('postulante');
 Route::POST('/guardapostulantei','postulantec@guardapostulantef')->name('guardapostulantei');
 Route::get('/reportepostulantei','postulantec@reportepostulantef')->name('reportepostulantei');
+
+Route::get('/modificam1/{id_postulante}','postulantec@modificam1')->name('modificam1');
+Route::POST('/guardamodificam1','postulantec@guardamodificam1')->name('guardamodificam1');
 
 //usuario//
 

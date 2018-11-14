@@ -21,10 +21,23 @@
 <td>{{$ma->apm}}</td>
 <td>{{$ma->usuario}}</td><td>
 
-<td>{{$ma->oficio_profecion}}</td>
-<td>{{$ma->cp}}</td>
-<td>
 
+<td>
+@if($ma->deleted_at=="")
+   <a  class="btn btn-default" href=""> 
+	Inhabilitar 
+	</a> 
+   <a class="btn btn-default" href="{{URL::action('postulantec@modificam1',['id_postulante'=>$ma->id_postulante])}}"> 
+   Modificar</a>
+@else
+<a  class="btn btn-default" href=""> 
+	Restaurar  
+	</a> 
+    <a  class="btn btn-default" href="">  
+	Eliminar 
+	</a> 
+	
+@endif
 </td>
 </tr>
 @endforeach
