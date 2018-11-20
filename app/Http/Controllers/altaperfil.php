@@ -72,7 +72,8 @@ class altaperfil extends Controller
 
 			 public function reporteperfilf()
 	{
-	$perfil=perfil::orderBy('id_perfil','asc')
+        
+	$perfil=perfil::withTrashed()->orderBy('id_perfil','asc')
 	          ->get();
 	//return $maestros;
 	  return view('sistema.reporte')
@@ -143,5 +144,35 @@ public function guardamodificam(Request $request)
             return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
-            }}
+            }
+            public function eliminaperfil($id_perfil)
+            {
+                  perfil::find($id_perfil)->delete();
+                    $proceso = "ELIMINAR PERFIL";
+                    $mensaje = "Ha sido desactivado Correctamente";
+                    return view ('sistema.mensaje')
+                    ->with('proceso',$proceso)
+                    ->with('mensaje',$mensaje);
+            }
+            public function restaurap($id_perfil)
+            {
+            perfil::withTrashed()->where('id_perfil',$id_perfil)->restore();
+        $proceso = "RESTAURACION DE PERFIL";	
+        $mensaje="Registro restaurado correctamente";
+        return view('sistema.mensaje')
+        ->with('proceso',$proceso)
+        ->with('mensaje',$mensaje);
+            }
+             public function deletep($id_perfil)
+            {
+                
+           perfil::withTrashed()->where('id_perfil',$id_perfil)->forceDelete();
+        $proceso = "ELIMINACION FISICA DE usuario";	
+        $mensaje="Registro eliminado del sistema correctamente";
+        return view('sistema.mensaje')
+        ->with('proceso',$proceso)
+        ->with('mensaje',$mensaje);
+            }
+        
+        }
            
