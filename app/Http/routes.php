@@ -73,6 +73,13 @@ Route::get('/reportepostulantei','postulantec@reportepostulantef')->name('report
 Route::get('/modificam1/{id_postulante}','postulantec@modificam1')->name('modificam1');
 Route::POST('/guardamodificam1','postulantec@guardamodificam1')->name('guardamodificam1');
 
+
+Route::get('/eliminap/{id_postulante}','postulantec@eliminausuario')->name('eliminap');
+Route::get('/deletep/{id_postulante}','postulantec@deletel')->name('deletep');
+Route::get('/restaurap/{id_postulante}','postulantec@restauraf')->name('restaurap');
+
+
+
 //usuario//
 
 Route::get('/altausuarioi','altausuario@altausuario')->name('altausuarioi');

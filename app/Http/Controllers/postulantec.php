@@ -52,7 +52,7 @@ class postulantec extends Controller
             }
 			 public function reportepostulantef()
 	{
-	$postulante=postulante::orderBy('id_postulante','asc')
+	$postulante=postulante::withTrashed()->orderBy('id_postulante','asc')
 	          ->get();
 	//return $maestros;
 	  return view('sistema.reportepostulante')
@@ -105,5 +105,34 @@ public function guardamodificam1(Request $request)
             return view ('sistema.mensaje')
             ->with('proceso',$proceso)
             ->with('mensaje',$mensaje);
-            }
+            } 
+			 public function eliminausuario($id_postulante)
+	{
+		  postulante::find($id_postulante)->delete();
+		    $proceso = "ELIMINAR postulante";
+			$mensaje = "El postulante ha sido desactivado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
+	}
+    public function restauraf($id_postulante)
+	{
+	postulante::withTrashed()->where('id_postulante',$id_postulante)->restore();
+$proceso = "RESTAURACION DE postulante";	
+$mensaje="Registro restaurado correctamente";
+return view('sistema.mensaje')
+->with('proceso',$proceso)
+->with('mensaje',$mensaje);
+	}
+     public function deletel($id_postulante)
+	{
+		
+   postulante::withTrashed()->where('id_postulante',$id_postulante)->forceDelete();
+$proceso = "ELIMINACION FISICA DE postulante";	
+$mensaje="Registro eliminado del sistema correctamente";
+return view('sistema.mensaje')
+->with('proceso',$proceso)
+->with('mensaje',$mensaje);
+    }
+
 }

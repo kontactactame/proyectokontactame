@@ -31,16 +31,16 @@
 
 <td>
 @if($ma->deleted_at=="")
-   <a  class="btn btn-default" href=""> 
+    <a  class="btn btn-default" href="{{URL::action('postulantec@eliminausuario',['id_postulante'=>$ma->id_postulante])}}"> 
 	Inhabilitar 
 	</a> 
    <a class="btn btn-default" href="{{URL::action('postulantec@modificam1',['id_postulante'=>$ma->id_postulante])}}"> 
    Modificar</a>
 @else
-<a  class="btn btn-default" href=""> 
+<a  class="btn btn-default" href="{{URL::action('postulantec@restauraf',['id_postulante'=>$ma->id_postulante])}}"> 
 	Restaurar  
 	</a> 
-    <a  class="btn btn-default" href="">  
+       <a  class="btn btn-default" href="{{URL::action('postulantec@deletel',['id_postulante'=>$ma->id_postulante])}}">  
 	Eliminar 
 	</a> 
 	
