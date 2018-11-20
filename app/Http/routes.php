@@ -61,6 +61,10 @@ Route::get('/reporteperfil','altaperfil@reporteperfilf')->name('reporteperfil');
 
 Route::get('/modificam/{id_perfil}','altaperfil@modificam')->name('modificam');
 Route::POST('/guardamodificam','altaperfil@guardamodificam')->name('guardamodificam');
+Route::get('/eliminaperfil/{id_perfil}','altaperfil@eliminaperfil')->name('eliminaperfil');
+Route::get('/deletep/{id_perfil}','altaperfil@deletep')->name('deletep');
+Route::get('/restaurap/{id_perfil}','altaperfil@restaurap')->name('restaurap');
+
 ////////////////////////////////////////////alta postulante////////////////////////////////////////////////////////
 Route::get('/altapostulantei','postulantec@altapostulantef')->name('postulante');
 Route::POST('/guardapostulantei','postulantec@guardapostulantef')->name('guardapostulantei');

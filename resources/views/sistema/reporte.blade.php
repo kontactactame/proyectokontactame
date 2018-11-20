@@ -29,17 +29,17 @@
 <td>{{$ma->cp}}</td>
 <td>
 @if($ma->deleted_at=="")
-   <a  class="btn btn-default" href=""> 
+<a  class="btn btn-default" href="{{URL::action('altaperfil@eliminaperfil',['id_perfil'=>$ma->id_perfil])}}"> 
 	Inhabilitar 
 	</a> 
    <a class="btn btn-default" href="{{URL::action('altaperfil@modificam',['id_perfil'=>$ma->id_perfil])}}"> 
    Modificar</a>
 @else
-<a  class="btn btn-default" href=""> 
+<a  class="btn btn-default" href="{{URL::action('altaperfil@restaurap',['id_perfil'=>$ma->id_perfil])}}"> 
 	Restaurar  
 	</a> 
-    <a  class="btn btn-default" href="">  
-	Eliminar 
+   <a  class="btn btn-default" href="{{URL::action('altaperfil@deletep',['id_perfil'=>$ma->id_perfil])}}"> 
+	Eliminar  
 	</a> 
 	
 @endif
