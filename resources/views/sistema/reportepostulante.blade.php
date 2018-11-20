@@ -20,16 +20,14 @@
 <td>{{$ma->app}}</td>
 <td>{{$ma->apm}}</td>
 <td>{{$ma->usuario}}</td><td>
-<<<<<<< HEAD
 
-=======
+
+
 <img src = "{{asset('archivos/'.$ma->archivo)}}"
         height =50 width=50>
     </td>
 <td>{{$ma->oficio_profecion}}</td>
 <td>{{$ma->cp}}</td>
-<td>
->>>>>>> bcf3770451fe40a9a20836a0a30e0ff69b8db549
 
 <td>
 @if($ma->deleted_at=="")
