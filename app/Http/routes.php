@@ -76,7 +76,7 @@ Route::POST('/guardausuario','altausuario@guardausuario')->name('guardausuario')
 Route::get('/reporteusuarioi','altausuario@reporteusuariof')->name('reporteusuarioi');
 Route::get('/modificamu/{id_usuario}','altausuario@modificamu')->name('modificamu');
 Route::POST('/guardamodificamu','altausuario@guardamodificamu')->name('guardamodificamu');
-
-
-
+Route::get('/eliminai/{id_perfil}','altausuario@eliminausuario')->name('eliminai');
+Route::get('/deletei/{id_perfil}','altausuario@deletel')->name('deletei');
+Route::get('/restaurai/{id_perfil}','altausuario@restauraf')->name('restaurai');
 

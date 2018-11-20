@@ -71,7 +71,7 @@ class altausuario extends Controller
 			 }
             public function reporteusuariof()
 	 {
-	$usuario=usuario::orderBy('id_usuario','asc')
+	$usuario=usuario::withTrashed()->orderBy('id_usuario','asc')
 	          ->get();
 	//return $maestros;
 	  return view('sistema.reporteusuario')
@@ -144,5 +144,36 @@ class altausuario extends Controller
             ->with('mensaje',$mensaje);
 			
 			 }
+			 
+			
+			 
+			 public function eliminausuario($id_usuario)
+	{
+		  usuario::find($id_usuario)->delete();
+		    $proceso = "ELIMINAR usuario";
+			$mensaje = "El usuario ha sido desactivado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
+	}
+    public function restauraf($id_usuario)
+	{
+	usuario::withTrashed()->where('id_usuario',$id_usuario)->restore();
+$proceso = "RESTAURACION DE usuario";	
+$mensaje="Registro restaurado correctamente";
+return view('sistema.mensaje')
+->with('proceso',$proceso)
+->with('mensaje',$mensaje);
+	}
+     public function deletel($id_usuario)
+	{
+		
+   usuario::withTrashed()->where('id_usuario',$id_usuario)->forceDelete();
+$proceso = "ELIMINACION FISICA DE usuario";	
+$mensaje="Registro eliminado del sistema correctamente";
+return view('sistema.mensaje')
+->with('proceso',$proceso)
+->with('mensaje',$mensaje);
+    }
 }
            

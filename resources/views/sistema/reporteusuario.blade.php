@@ -26,17 +26,17 @@
 <td>
 <td>
 @if($ma->deleted_at=="")
-   <a  class="btn btn-default" href=""> 
+   <a  class="btn btn-default" href="{{URL::action('altausuario@eliminausuario',['id_usuario'=>$ma->id_usuario])}}"> 
 	Inhabilitar 
 	</a> 
    <a class="btn btn-default" href="{{URL::action('altausuario@modificamu',['id_usuario'=>$ma->id_usuario])}}"> 
    Modificar</a>
 @else
-	 <a href=""> 
+  <a  class="btn btn-default" href="{{URL::action('altausuario@restauraf',['id_usuario'=>$ma->id_usuario])}}"> 
 	Restaurar  
 	</a> 
-    <a href=""> 
-	Eliminar 
+   <a  class="btn btn-default" href="{{URL::action('altausuario@deletel',['id_usuario'=>$ma->id_usuario])}}"> 
+	Eliminar  
 	</a> 
 @endif
 </td>
